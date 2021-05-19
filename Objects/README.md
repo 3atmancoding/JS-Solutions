@@ -13,7 +13,9 @@ let user = {
 
 ### Remove a property
 
-`js delete user.name;`
+```js
+delete user.name;
+```
 
 ### Add multiword property
 
