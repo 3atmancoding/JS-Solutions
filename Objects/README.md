@@ -75,7 +75,6 @@ user.greet(); // Output is Tom
 let obj = {
   model: 'Ford',
   greet: function () {
-    let self = this;
     function inner() {
       console.log(self.model);
     }
@@ -84,4 +83,22 @@ let obj = {
   },
 };
 obj.greet(); // Output will be undefined for inner() and Ford
+```
+
+### To fetch model from obj in inner function
+
+```js
+let obj = {
+  model: 'Ford',
+  greet: function () {
+    let self = this;
+    function inner() {
+      console.log(self.model);
+    }
+    inner();
+    return console.log(this.model);
+  },
+};
+
+obj.greet(); // Output will be Ford for inner() and Ford
 ```
