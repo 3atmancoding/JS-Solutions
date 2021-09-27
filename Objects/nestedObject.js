@@ -4,7 +4,7 @@ function nestObjKey(obj){
     },{})
 }
 var obj = {a:{b:{c:{d:{e:1}}}}}
-iterateFn(obj)
+nestObjKey(obj)
 
 
 //output :: {e:1}
